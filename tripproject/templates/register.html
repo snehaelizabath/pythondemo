@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Registration</h2>
+<form action="register" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="enter your username"><br>
+    <input type="text" name="first_name" placeholder="enter your first_name"><br>
+    <input type="text" name="last_name" placeholder="enter your last_name"><br>
+    <input type="email" name="email" placeholder="enter your email address"><br>
+    <input type="password" name="password" placeholder="enter your password"><br>
+    <input type="password" name="password1" placeholder="enter your conform password"><br>
+    <input type="submit">
+</form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+</body>
+</html>
+<!--<form action="action_page.php">-->
+<!--  <div class="container">-->
+<!--    <h1>Register</h1>-->
+<!--       <link rel="stylesheet" href="style.css">-->
+<!--    <p>Please fill in this form to create an account.</p>-->
+<!--    <hr>-->
+<!--      <label for="username"><b>username</b></label>-->
+<!--    <input type="text" placeholder="Enter username" name="username" id="username" required><br>-->
+<!--       <label for="first_name"><b>first_name</b></label>-->
+<!--    <input type="text" placeholder="Enter first_name" name="first_name" id="first_name" required><br>-->
+<!--       <label for="last_name"><b>last_name</b></label>-->
+<!--    <input type="text" placeholder="Enter last_name" name="last_name" id="last_name" required><br>-->
+
+<!--    <label for="email"><b>Email</b></label>-->
+<!--    <input type="text" placeholder="Enter Email" name="email" id="email" required><br>-->
+
+<!--    <label for="psw"><b>Password</b></label>-->
+<!--    <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>-->
+
+<!--    <label for="psw-repeat"><b>Repeat Password</b></label>-->
+<!--    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required><br>-->
+<!--    <hr>-->
+
+<!--    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>-->
+<!--    <button type="submit" class="registerbtn">Register</button><br>-->
+<!--  </div>-->
+
+<!--  <div class="container signin">-->
+<!--    <p>Already have an account? <a href="#">Sign in</a>.</p>-->
+<!--  </div>-->
+<!--</form>-->
